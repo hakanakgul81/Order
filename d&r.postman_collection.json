@@ -1,0 +1,59 @@
+{
+	"info": {
+		"_postman_id": "e7c772e7-f661-4496-9d6c-2ed3b3e01dcf",
+		"name": "d&r",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sipariş Oluşturma Servisi",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"customer_firstname\":\"Hakan\",\r\n        \"customer_lastname\":\"Akgul\",\r\n        \"phone\":\"5436529460\",\r\n        \"email\":\"hakanakgul81@gmail.com\",\r\n        \"city\":\"Istanbul\",\r\n        \"district\":\"Gaziosmanpasa\"\r\n    },\r\n    {\r\n        \"product_id\": 8,\r\n        \"quantity\":1\r\n    },\r\n\t{\r\n\t\t\"product_id\": 10,\r\n        \"quantity\":2\r\n\t}\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/codeigniter/order/addorder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"codeigniter",
+						"order",
+						"addorder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sipariş Sorgulama Servisi",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/codeigniter/order/getOrderResult/27",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"codeigniter",
+						"order",
+						"getOrderResult",
+						"27"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
